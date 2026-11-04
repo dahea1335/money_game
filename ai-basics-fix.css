@@ -1,0 +1,29 @@
+/* AI-1 단계 공개 상태와 핵심 정리 강조 카드 */
+#ai-basics .stage-actions button.completed {
+  background: #293e4b;
+  box-shadow: inset 0 0 0 2px rgba(189, 232, 237, .8);
+}
+
+#ai-basics .ai-key-message.open {
+  display: grid;
+  gap: 9px;
+  max-width: 900px;
+  border: 2px solid #91cfd6;
+  background: linear-gradient(135deg, #dff4f6, #f3fbfb);
+  box-shadow: 0 14px 34px rgba(41, 62, 75, .12);
+  padding: 20px 25px;
+  color: #293e4b;
+  text-align: left;
+}
+
+#ai-basics .ai-key-message strong {
+  color: #3e8793;
+  font-size: clamp(21px, 1.8vw, 28px);
+}
+
+#ai-basics .ai-key-message p {
+  margin: 0;
+  font-size: clamp(16px, 1.3vw, 20px);
+  font-weight: 800;
+  line-height: 1.55;
+}

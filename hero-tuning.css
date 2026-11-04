@@ -1,0 +1,230 @@
+.hero h1 {
+  font-size: clamp(58px, 7.2vw, 108px);
+  line-height: .82;
+  letter-spacing: -5px;
+}
+
+.hero-ai {
+  margin-top: 11px;
+  color: #e58e98;
+  font-size: clamp(23px, 2.5vw, 38px);
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: .06em;
+}
+
+.hero-ai + .hero-ko {
+  margin-top: 15px;
+}
+
+#value .oil-question-layout {
+  display: block;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#ai-assistant > .primary { display: block; margin: 14px auto 0; }
+
+/* 첫 표지를 제외한 수업 화면은 상단부터 시작해 한 화면에 더 많이 보이도록 합니다. */
+.lesson-section:not(.hero) {
+  padding-top: clamp(24px, 3.2vh, 38px);
+  padding-bottom: clamp(24px, 3.2vh, 38px);
+}
+
+.lesson-section.concept {
+  align-content: start;
+  justify-items: center;
+}
+
+.lesson-section.lecture > header,
+.results-section > header {
+  width: 100%;
+}
+
+.lesson-section.lecture h2,
+.results-section h2 {
+  margin-top: 6px;
+  margin-bottom: clamp(22px, 3vh, 34px);
+  font-size: clamp(38px, 4.5vw, 66px);
+}
+
+#value .compare,
+#market .market-grid,
+#quiz .quiz-list,
+#rules .steps,
+#items .item-showcase {
+  width: 100%;
+}
+
+/* 게임판은 원래의 좁은 외곽 여백을 유지합니다. */
+.lesson-section.game-section { padding: 28px; }
+
+/* 왼쪽 아래에는 전체 초기화만 한 줄로 표시합니다. */
+.side-actions.reset-only { grid-template-columns: 1fr; }
+
+/* 경매 중 금액 정보와 조작 기능은 학생 화면에 공개하지 않습니다. */
+.game-section .money-edit { display: none; }
+.game-section .rank { display: none; }
+.game-section .item-control { min-width: 0; text-align: center; }
+.game-section .item-control .item-toggle { width: 100%; }
+.game-section .item-control label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 4px;
+  color: #657a83;
+  font-size: 9px;
+  font-weight: 800;
+}
+.game-section .item-qty {
+  width: 34px;
+  height: 23px;
+  padding: 1px 2px;
+  border: 1px solid #cadde0;
+  border-radius: 6px;
+  background: #fff;
+  color: #293e4b;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.class-guidelines {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.guideline-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 390px;
+  padding: 34px;
+  border: 2px solid rgba(62, 135, 147, .12);
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 18px 48px rgba(41, 62, 75, .12);
+}
+
+.guideline-card::after {
+  content: "";
+  position: absolute;
+  right: -55px;
+  bottom: -65px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(189, 232, 237, .28);
+}
+
+.request-card::after { background: rgba(247, 198, 199, .3); }
+.guideline-title { display: flex; align-items: center; gap: 17px; }
+.guideline-title > span {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 20px;
+  background: #e7f6f7;
+  font-size: 34px;
+}
+.request-card .guideline-title > span { background: #fdebed; }
+.guideline-title small { color: #3e8793; font-weight: 900; letter-spacing: 1.5px; }
+.guideline-title h3 { margin: 2px 0 0; font-size: 30px; }
+.guideline-card ol { margin: 30px 0 0; padding: 0; list-style: none; counter-reset: guide; }
+.guideline-card li {
+  position: relative;
+  min-height: 105px;
+  padding: 0 0 24px 55px;
+  counter-increment: guide;
+}
+.guideline-card li + li { padding-top: 22px; border-top: 1px solid #e4edef; }
+.guideline-card li::before {
+  content: counter(guide, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d78689;
+  font-size: 19px;
+  font-weight: 900;
+}
+.guideline-card li + li::before { top: 22px; }
+.guideline-card li b { font-size: clamp(18px, 1.45vw, 24px); line-height: 1.45; }
+.guideline-card li p { margin: 7px 0 0; color: #657a83; font-size: 16px; line-height: 1.6; }
+.guideline-card em { color: #087fc4; font-style: normal; font-weight: 900; }
+
+/* 두 번째 수업 화면은 전자칠판 한 화면에 핵심 내용이 모두 보이도록 구성합니다. */
+#guide {
+  min-height: 100vh;
+  padding: clamp(28px, 4vh, 48px) clamp(35px, 6vw, 95px) 28px;
+}
+
+#guide header span { font-size: 11px; }
+#guide h2 {
+  margin: 6px 0 24px;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.04;
+}
+
+#guide .class-guidelines { gap: 20px; }
+#guide .guideline-card {
+  min-height: 315px;
+  padding: 25px 28px 20px;
+  border-radius: 25px;
+}
+#guide .guideline-title { gap: 14px; }
+#guide .guideline-title > span {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  font-size: 28px;
+}
+#guide .guideline-title h3 { font-size: 27px; }
+#guide .guideline-card ol { margin-top: 20px; }
+#guide .guideline-card li {
+  min-height: 82px;
+  padding: 0 0 15px 48px;
+}
+#guide .guideline-card li + li { padding-top: 15px; }
+#guide .guideline-card li + li::before { top: 15px; }
+#guide .guideline-card li b { font-size: clamp(17px, 1.25vw, 21px); }
+#guide .guideline-card li p {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+#guide .next {
+  margin-top: 18px;
+  padding: 13px 23px;
+}
+
+@media (max-height: 780px) and (min-width: 761px) {
+  #guide { padding-top: 20px; padding-bottom: 18px; }
+  #guide h2 { margin-bottom: 16px; font-size: 42px; }
+  #guide .guideline-card { min-height: 285px; padding-top: 20px; }
+  #guide .guideline-card ol { margin-top: 14px; }
+  #guide .next { margin-top: 12px; }
+  .lesson-section:not(.hero) { padding-top: 18px; padding-bottom: 18px; }
+  .lesson-section.lecture h2,
+  .results-section h2 { margin-bottom: 18px; font-size: 46px; }
+  .lesson-section.game-section { padding: 18px; }
+}
+
+@media (max-width: 760px) {
+  .hero h1 {
+    font-size: clamp(52px, 17vw, 78px);
+    letter-spacing: -3px;
+  }
+  .hero-ai {
+    margin-top: 9px;
+    font-size: clamp(21px, 7vw, 30px);
+  }
+  .hero-ai + .hero-ko { margin-top: 13px; }
+  .class-guidelines { grid-template-columns: 1fr; }
+  .guideline-card { min-height: auto; padding: 25px; }
+  #guide { padding: 55px 22px; }
+  #guide h2 { font-size: 38px; }
+  #guide .guideline-card { min-height: auto; }
+}
